@@ -2410,6 +2410,22 @@
 })();
 </script>
 
+<script>
+function startGame() {
+
+    const cover = document.getElementById("gameCover");
+    const frame = document.getElementById("gameFrame");
+
+    const gameURL = frame.getAttribute("data-src");
+
+    frame.src = gameURL;
+
+    frame.style.display = "block";
+
+    cover.style.display = "none";
+}
+</script>
+  
 </body>
 </html>
 <!-- Atualização 6-->
