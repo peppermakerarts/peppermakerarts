@@ -621,6 +621,438 @@
   .cta-band p{color:var(--paper-dim);margin-top:10px;}
   .cta-band .cta-row{justify-content:center;}
 /* ---------- GALERIA ---------- */
+/* =========================================
+   CARD DE JOGO - PEPPER MAKER ARTS
+   ========================================= */
+
+.game-section {
+    padding: 50px 0 70px;
+}
+
+/* CARD PRINCIPAL */
+
+.game-card {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    background: #111815;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.45);
+}
+
+
+/* CABEÇALHO */
+
+.game-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 28px 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.game-category {
+    display: inline-block;
+
+    color: #ff3b30;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 7px;
+}
+
+.game-header h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 28px;
+}
+
+.game-badge {
+    background: #ff3b30;
+
+    color: white;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* DESCRIÇÃO */
+
+.game-description {
+    padding: 20px 30px 25px;
+}
+
+.game-description p {
+    margin: 0;
+
+    color: #bfc8c4;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* ÁREA DO JOGO */
+
+.game-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    background: #050505;
+
+    overflow: hidden;
+
+    border-top: 1px solid rgba(255,255,255,0.05);
+
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+
+/* IFRAME */
+
+.game-wrapper iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    display: none;
+}
+
+
+/* CAPA DO JOGO */
+
+.game-cover {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,59,48,0.15),
+            transparent 55%
+        ),
+        #080b0a;
+}
+
+
+/* EFEITO DECORATIVO */
+
+.game-cover::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,59,48,0.20);
+
+    animation: gamePulse 3s infinite;
+}
+
+@keyframes gamePulse {
+
+    0%, 100% {
+        transform: scale(0.9);
+
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.1);
+
+        opacity: 0.8;
+    }
+
+}
+
+
+/* CONTEÚDO DA CAPA */
+
+.game-cover-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.game-icon {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+.game-cover h3 {
+    margin: 0 0 5px;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+.game-cover p {
+    margin: 0 0 22px;
+
+    color: #aeb7b3;
+}
+
+
+/* BOTÃO JOGAR */
+
+.play-button {
+    border: none;
+
+    background: #ff3b30;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255,59,48,0.30);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.play-button:hover {
+    background: #ff5148;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(255,59,48,0.45);
+}
+
+.play-button:active {
+    transform: translateY(0);
+}
+
+
+/* CONTROLES */
+
+.game-controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 20px 30px;
+
+    background: #0d1210;
+}
+
+.controls-title {
+    color: white;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.controls-list {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.control {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #aeb7b3;
+
+    font-size: 13px;
+}
+
+.key {
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 30px;
+
+    height: 30px;
+
+    padding: 0 6px;
+
+    background: #1a211e;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 2px 0 rgba(255,255,255,0.08);
+}
+
+
+/* RODAPÉ */
+
+.game-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 30px;
+
+    color: #7f8a85;
+
+    font-size: 12px;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.game-footer a {
+    color: #ff5a50;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.game-footer a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CELULAR
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .game-section {
+        padding: 30px 0 50px;
+    }
+
+    .game-header {
+        padding: 22px;
+
+        align-items: flex-start;
+    }
+
+    .game-header h2 {
+        font-size: 21px;
+    }
+
+    .game-description {
+        padding: 18px 22px 22px;
+    }
+
+    .game-controls {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 18px 22px;
+    }
+
+    .game-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 18px 22px;
+    }
+
+    .game-cover h3 {
+        font-size: 21px;
+    }
+
+    .game-icon {
+        font-size: 45px;
+    }
+
+}
+  
   .gallery-filters{
     display:flex;
     flex-wrap:wrap;
@@ -1540,17 +1972,117 @@
      <div>
       <h3>Veja e Teste os Projetos</h3>
        <p> </p>
-       <div class="game-container">
 
-          <iframe
-            src="https://itch.io/embed-upload/18851427?color=333333"
-            width="660"
-            height="371"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+    <!-- CARD DO JOGO -->
+<div class="game-section">
+  <div class="container">
+
+    <div class="game-card">
+
+      <!-- CABEÇALHO -->
+      <div class="game-header">
+        <div>
+          <span class="game-category">🎮 GAME</span>
+          <h2>Jogo de Plataforma Simples</h2>
+        </div>
+
+        <span class="game-badge">HTML5</span>
       </div>
+
+      <!-- DESCRIÇÃO -->
+      <div class="game-description">
+        <p>
+          Controle o personagem, pule pelas plataformas, evite os inimigos
+          e chegue até a bandeira final!
+        </p>
+      </div>
+
+      <!-- ÁREA DO JOGO -->
+      <div class="game-wrapper">
+
+        <!-- CAPA ANTES DE JOGAR -->
+        <div class="game-cover" id="gameCover">
+
+          <div class="game-cover-content">
+
+            <div class="game-icon">🎮</div>
+
+            <h3>Jogo de Plataforma</h3>
+
+            <p>
+              Pronto para jogar?
+            </p>
+
+            <button
+              class="play-button"
+              onclick="startGame()">
+              ▶ Jogar
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- IFRAME DO ITCH.IO -->
+        <iframe
+          id="gameFrame"
+          src=""
+          data-src="https://itch.io/embed-upload/18851427?color=333333"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="game-controls">
+
+        <div class="controls-title">
+          🎮 Controles
+        </div>
+
+        <div class="controls-list">
+
+          <div class="control">
+            <span class="key">←</span>
+            <span>Movimentar</span>
+          </div>
+
+          <div class="control">
+            <span class="key">→</span>
+            <span>Movimentar</span>
+          </div>
+
+          <div class="control">
+            <span class="key">↑</span>
+            <span>Pular</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RODAPÉ DO CARD -->
+      <div class="game-footer">
+
+        <span>
+          💻 Desenvolvido com tecnologia HTML5
+        </span>
+
+        <a
+          href="https://peppermakerarts.itch.io/jogo-de-plataforma-simples"
+          target="_blank"
+          rel="noopener">
+          Ver projeto no itch.io ↗
+        </a>
+
+      </div>
+
     </div>
+
+  </div>
+</div>
+       
   </div>
 </section>
   
