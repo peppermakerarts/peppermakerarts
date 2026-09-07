@@ -2084,6 +2084,138 @@
 </div>
        
   </div>
+
+  <!-- CARD DO JOGO - CAR GAME SFC -->
+<div class="game-section">
+  <div class="container">
+
+    <div class="game-card">
+
+      <!-- CABEÇALHO -->
+      <div class="game-header">
+
+        <div>
+          <span class="game-category">🏎️ GAME</span>
+
+          <h2>Car Game - SFC</h2>
+        </div>
+
+        <span class="game-badge">HTML5</span>
+
+      </div>
+
+
+      <!-- DESCRIÇÃO -->
+      <div class="game-description">
+
+        <p>
+          Um jogo de corrida desenvolvido nas aulas da Pepper Maker Arts.
+          Controle o veículo, desvie dos obstáculos e tente chegar o mais
+          longe possível!
+        </p>
+
+      </div>
+
+
+      <!-- ÁREA DO JOGO -->
+      <div class="game-wrapper">
+
+        <!-- CAPA ANTES DE JOGAR -->
+        <div class="game-cover" id="carGameCover">
+
+          <div class="game-cover-content">
+
+            <div class="game-icon">🏎️</div>
+
+            <h3>Car Game - SFC</h3>
+
+            <p>
+              Pronto para acelerar?
+            </p>
+
+            <button
+              class="play-button"
+              onclick="startCarGame()">
+              ▶ Jogar
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- JOGO -->
+        <iframe
+          id="carGameFrame"
+          src=""
+          data-src="https://games.construct.net/62656/latest"
+          frameborder="0"
+          allow="fullscreen; autoplay; encrypted-media"
+          allowfullscreen="true"
+          msallowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+          allowpaymentrequest="false"
+          referrerpolicy="unsafe-url"
+          sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups"
+          scrolling="no">
+        </iframe>
+
+      </div>
+
+
+      <!-- CONTROLES -->
+      <div class="game-controls">
+
+        <div class="controls-title">
+          🎮 Controles
+        </div>
+
+        <div class="controls-list">
+
+          <div class="control">
+            <span class="key">←</span>
+            <span>Esquerda</span>
+          </div>
+
+          <div class="control">
+            <span class="key">→</span>
+            <span>Direita</span>
+          </div>
+
+          <div class="control">
+            <span class="key">↑</span>
+            <span>Acelerar</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- RODAPÉ -->
+      <div class="game-footer">
+
+        <span>
+          🛠️ Desenvolvido com Construct 3
+        </span>
+
+        <a
+          href="https://games.construct.net/62656/latest"
+          target="_blank"
+          rel="noopener">
+          Ver projeto no Construct Arcade ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+  
 </section>
   
   <!-- ============ 7. CONTATO ============ -->
@@ -2415,6 +2547,22 @@ function startGame() {
 
     const cover = document.getElementById("gameCover");
     const frame = document.getElementById("gameFrame");
+
+    const gameURL = frame.getAttribute("data-src");
+
+    frame.src = gameURL;
+
+    frame.style.display = "block";
+
+    cover.style.display = "none";
+}
+</script>
+
+  <script>
+function startCarGame() {
+
+    const cover = document.getElementById("carGameCover");
+    const frame = document.getElementById("carGameFrame");
 
     const gameURL = frame.getAttribute("data-src");
 
